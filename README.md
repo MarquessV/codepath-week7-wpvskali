@@ -8,11 +8,14 @@ Time spent: **3** hours spent in total
 
 	
 1. (Required) Authenticated Stored Cross-Site Scripting via Image Filename (ID: 8615)
-	I uploaded an image with the file name NormalLookingImageName<img src=a onerror=alert('imagexss')>.jpg and included it in a post. Image filenames aren't sanitized, so the code executes whenever someone loads the page.
+
   - [x] Summary: 
     - Vulnerability types: XSS
     - Tested in version: 4.0.1
-    - Fixed in version: 
+    - Fixed in version: 4.6.1
+    
+    I uploaded an image with the file name NormalLookingImageName<img src=a onerror=alert('imagexss')>.jpg and included it in a post. Image filenames aren't sanitized, so the code executes whenever someone loads the page.
+    
   - [x] GIF Walkthrough: 
 		<img src='http://i.imgur.com/GelORed.gif' title='Exploit 1' width='' alt='Exploit 1' />
   - [x] Steps to recreate:
@@ -26,7 +29,9 @@ Time spent: **3** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.0.1
     - Fixed in version: 4.7.2
-	I referred to the linked blog post to recreate the exploit. It works by taking advantage of an oversight in the regex that is supposed to sanitize the embed code. It was fixed in future versions of wordpress by using the urlencode() function.
+    
+	I referred to the linked blog post on the vulnerability page to recreate the exploit. It works by taking advantage of an oversight in the regex that is supposed to sanitize the embed code. It was fixed in future versions of wordpress by using the urlencode() function.
+	
   - [x] GIF Walkthrough: 
 		<img src='http://i.imgur.com/AXnl9jA.gif' title='Exploit 2' width='' alt='Exploit 2' />  
   - [x] Steps to recreate: 
@@ -40,7 +45,9 @@ Time spent: **3** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.0.1
     - Fixed in version: 4.2.4
-	I referred to the linked blog post to recreate the exploit. By putting code in the title tag of an html link input sanitization is avoided.
+    
+	I referred to the linked blog post on the vulnerability to recreate the exploit. By putting code in the title tag of an html link input sanitization is avoided.
+	
   - [x] GIF Walkthrough:
 		<img src='http://i.imgur.com/lki7Yhh.gif' title='Exploit 3' width='' alt='Exploit 3' />  
   - [x] Steps to recreate: 
